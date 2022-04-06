@@ -20,14 +20,18 @@ var server= http.createServer(function(req,res){
         var data = fs.readFileSync( file);
 
         //向此文件刷入配置
-        var startbuf = new Buffer("placeholderstart", "utf8");
-        var endbuf = new Buffer("placeholderend", "utf8");
+        var startbuf = new Buffer("[placeholderstart", "utf8");
+        var endbuf = new Buffer("placeholderend]", "utf8") +"placeholderend]".length;
         const configFromIndex = data.indexOf(startbuf);
         const configToIndex = data.indexOf(endbuf);
 
+        var configObj = {
+            "name": "宋佳恒",
+        }
+        var configJson = JSON.stringify(configObj);
         //字符串为utf-8
         //替换配置信息
-        var buf = new Buffer("宋佳恒", "utf8");
+        var buf = new Buffer(configJson, "utf8");
         buf.forEach((byte, index)=>{
             data[configFromIndex+index] = byte;
         });

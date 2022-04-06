@@ -1,6 +1,6 @@
 ﻿// cpptest.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
-
+#include "all.h"
 #include <iostream>
 #include "windows.h"
 
@@ -35,6 +35,14 @@ std::string Utf8ToString(std::string strUtf8)
 }
 int main()
 {
-	std::cout << Utf8ToString(p);
+	std::string str = Utf8ToString(p);
+	Json::Value jsonData;
+	Json::Reader reader;
+	if (reader.parse(str.c_str(), jsonData) && jsonData.size())
+	{
+		Json::Value data = jsonData["name"];
+		std::cout << data.asString();
+		std::cout << data.toStyledString();
+	}
 	system("pause");
 }
