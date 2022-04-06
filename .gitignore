@@ -1,3 +1,6 @@
 ﻿.idea
 cpptest/cpptest/.vs
 cpptest/cpptest/Debug
+cpptest/cpptest/Release
+cpptest/cpptest/x64
+node_modules
