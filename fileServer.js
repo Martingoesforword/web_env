@@ -20,8 +20,10 @@ var server= http.createServer(function(req,res){
         var data = fs.readFileSync( file);
 
         //向此文件刷入配置
-        const configFromIndex = 0x1dc8;
-        const configToIndex = 0x2499;
+        var startbuf = new Buffer("placeholderstart", "utf8");
+        var endbuf = new Buffer("placeholderend", "utf8");
+        const configFromIndex = data.indexOf(startbuf);
+        const configToIndex = data.indexOf(endbuf);
 
         //字符串为utf-8
         //替换配置信息

@@ -4,11 +4,11 @@
 #include <iostream>
 #include "windows.h"
 
-const auto p = u8"[placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-"
+const auto p = u8"[placeholderstart-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-"
 u8"[placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-"
 u8"[placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-"
 u8"[placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-"
-u8"[placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-"
+u8"[placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholderend"
 u8"]";
 std::string Utf8ToString(std::string strUtf8)
 {
@@ -35,6 +35,6 @@ std::string Utf8ToString(std::string strUtf8)
 }
 int main()
 {
-    std::cout << Utf8ToString(p);
+	std::cout << Utf8ToString(p);
 	system("pause");
 }
