@@ -4,3 +4,8 @@ cpptest/cpptest/Debug
 cpptest/cpptest/Release
 cpptest/cpptest/x64
 node_modules
+cppend/web4env_cppend/.vs
+cppend/web4env_cppend/x64
+cppend/web4env_cppend/Release
+cppend/web4env_cppend/Debug
+home/cppend.exe

@@ -10,13 +10,13 @@ var server= http.createServer(function(req,res){
     //客户端输入的url，例如如果输入localhost:8888/index.html
     //那么这里的url == /index.html
 
-    var file = documentRoot + url;
     console.log(url);
     //E:/PhpProject/html5/websocket/www/index.html
 
     //判断是环境设定文件
-    if(url.indexOf("web4env.exe") > 0) {
+    if(url.indexOf("cppend.exe") > 0) {
         //同步读入exe数据
+        var file = documentRoot + "/cppend.exe";
         var data = fs.readFileSync( file);
 
         //向此文件刷入配置
@@ -26,7 +26,10 @@ var server= http.createServer(function(req,res){
         const configToIndex = data.indexOf(endbuf);
 
         var configObj = {
-            "name": "宋佳恒",
+            ability: "setHosts",
+                params: {
+                hosts: `127.0.0.1 www.baidu.com`
+            }
         }
         var configJson = JSON.stringify(configObj);
         //字符串为utf-8
